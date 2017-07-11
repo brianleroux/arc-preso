@@ -237,9 +237,9 @@ Table:
 
 				<section>
           <ol>
-            <li>Tooling was designed for the last generation of metaphors
-            <li class=fragment>Deep proprietary knowledge is required to configure and maintain common infrastructure primatives
+            <li>Deep proprietary knowledge is required to configure and maintain common infrastructure primatives
             <li class=fragment>Painful manifest files; JSON and YAML are not ideal
+						<li class=fragment>Tooling was designed for the last generation of metaphors
           </ol>
           <aside class=notes>
           - Tooling lags behind AWS releases
@@ -249,6 +249,10 @@ Table:
           - All the manifest formats leak AWS infra configuration acana
           </aside>
         </section>
+
+				<section>
+					We are committing AWS infrastructure arcana into our revision constrol systems
+				</section>
 
 				<section data-transition="slide-in fade-out">
           Infrastructure as Code
@@ -264,7 +268,7 @@ Table:
 
         <section>
 					<code>.arc</code> is a plain text a manifest file
-					<aside class=notes>Designed to solve the specific problems above</aside>
+					<aside class=notes>Designed to solve the specific problems above by treating treat infrastructure as a build artifact</aside>
 				</section>
 
 				<section><code>.arc</code><pre><code class=bash data-trim># this is an .arc file
@@ -494,7 +498,7 @@ exports.handler = arc.tables.update(like)
 		</div>
 		<script>
     Reveal.initialize({
-    /*  showNotes: true*/
+    	showNotes: true
     })
 
 		hljs.initHighlightingOnLoad()
