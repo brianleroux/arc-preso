@@ -250,7 +250,7 @@ Table:
         </section>
 
 				<section>
-					We are committing AWS infra config arcana into our revision constrol systems
+					We are committing AWS infra config arcana into our revision control systems
 				</section>
 
 				<section data-transition="slide-in fade-out">
@@ -297,7 +297,7 @@ get /</code></pre>
 helloapp
 
 @html
-get /</code></pre><small>(Another way to say this is an <code>.arc</code> file always lives beside a <code>package.json</code> file.)</small>
+get /</code></pre><small><code>.arc</code> file always lives beside <code>package.json</code></small>
 				</section>
 
 				<section data-transition="fade-in fade-out"><code>@app</code> defines a namespace<pre><code class=bash data-trim># this is an .arc file
@@ -331,7 +331,7 @@ get /</code></pre><small>(Other HTTP handlers supported: <code>@css</code>, <cod
 #   '-package.json</code></pre><small>Lambda function wired to API Gateway to handles requests to <code>/</code>.</small>
 				</section>
 
-				<section data-transition="fade-in fade-out"><code>.arc</code> is very expressive<pre><code class=bash data-trim># this is an .arc file
+				<section data-transition="fade-in fade-out"><code>.arc</code> is expressive<pre><code class=bash data-trim># this is an .arc file
 @app
 helloapp
 
@@ -384,7 +384,7 @@ likes
   date *String</code></pre>
 				</section>
 
-        <section>Lets look at some of the generated cloud function code</section>
+        <section>Lets look at the generated cloud function code</section>
 
 				<section><code>src/html/get-index/index.js</code><pre><code class=javascript data-trim>var arc = require('@architect/prototype')
 
