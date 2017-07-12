@@ -66,7 +66,7 @@
         <section>
           <ol>
             <li>Manifest checked into your revision control system so you can version your infra beside your code
-            <li>Tooling for managing the the manifest based infra (usually global CLI binary)
+            <li>Tooling for managing the manifest based infra (usually global CLI binary)
           </ol>
         </section>
 
@@ -242,16 +242,15 @@ Table:
 						<li class=fragment>Tooling was designed for the last generation of metaphors
           </ol>
           <aside class=notes>
-          - Tooling lags behind AWS releases
-          - Setup requires expertise in AWS Primatives which might as well be AWS Frameworks
-          - JSON: is difficult to read, has no comments, and unforgiving to edit
-          - YAML isn't much better and especially worse with deeply nested statements
-          - All the manifest formats leak AWS infra configuration acana
+            <li>Tooling lags behind AWS releases
+            <li>Setup requires expertise in AWS Primatives which might as well be AWS Frameworks
+            <li>JSON: is difficult to read, has no comments, and unforgiving to edit
+            <li>YAML isn't much better and especially worse with deeply nested statements
           </aside>
         </section>
 
 				<section>
-					We are committing AWS infrastructure arcana into our revision constrol systems
+					We are committing AWS infra config arcana into our revision constrol systems
 				</section>
 
 				<section data-transition="slide-in fade-out">
@@ -268,7 +267,7 @@ Table:
 
         <section>
 					<code>.arc</code> is a plain text a manifest file
-					<aside class=notes>Designed to solve the specific problems above by treating treat infrastructure as a build artifact</aside>
+					<aside class=notes>Designed to solve the specific problems above by treating infra as a build artifacts</aside>
 				</section>
 
 				<section><code>.arc</code><pre><code class=bash data-trim># this is an .arc file
@@ -498,7 +497,7 @@ exports.handler = arc.tables.update(like)
 		</div>
 		<script>
     Reveal.initialize({
-    	showNotes: true
+    	showNotes: false
     })
 
 		hljs.initHighlightingOnLoad()
