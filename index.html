@@ -362,13 +362,14 @@ get /</code></pre><small>(Other HTTP handlers supported: <code>@css</code>, <cod
         </section>
 
 				<section data-transition="fade-in fade-out"><code>npm run create</code><pre><code class=bash data-trim>#   /
-#   |-src
-#   | '-html
-#   |   '-get-index
-#   |     |-index.js
-#   |     '-package.json
-#   |-.arc
-#   '-package.json</code></pre><small>A Lambda function wired to API Gateway handles requests to <code>/</code>.</small>
+#   ├──src
+#   │  └──html
+#   │     └──get-index
+#   │        ├─index.js
+#   │        └─package.json
+#   │
+#   ├──.arc
+#   └──package.json</code></pre><small>A Lambda function wired to API Gateway handles requests to <code>/</code>.</small>
 				</section>
 
 				<section data-transition="fade-in fade-out"><code>.arc</code> is expressive<pre><code class=bash data-trim># this is an .arc file
@@ -386,16 +387,18 @@ get /api</code></pre>
 				</section>
 
 				<section><code>npm run create</code><pre><code class=bash data-trim>#   /
-#   |-src
-#   | |-html
-#   | | |-get-index/
-#   | | |-get-about/
-#   | | |-get-contact/
-#   | | '-post-contact/
-#   | '-html
-#   |   '-get-api/
-#   |-.arc
-#   '-package.json</code></pre><small>The file system layout mirrors the <code>.arc</code> file.</small>
+#   ├──src
+#   │  ├──html
+#   │  │  ├──get-index/
+#   │  │  ├──get-about/
+#   │  │  ├──get-contact/
+#   │  │  └──post-contact/
+#   │  │
+#   │  └──html
+#   │     └──get-api/
+#   │
+#   ├──.arc
+#   └──package.json</code></pre><small>The file system layout mirrors the <code>.arc</code> file.</small>
 				</section>
 
 				<section>a complete <code>.arc</code> example<pre><code class=bash data-trim>@app
