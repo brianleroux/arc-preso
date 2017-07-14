@@ -16,13 +16,22 @@
 
         <section>
           <p>
-          &#x1f329; architect as text
+          &#x1f329; Architecture as text
           </p>
-          <small>
-          <a href=https://twitter.com/brianleroux>@brianleroux</a>
-          </small>
           <aside class=notes>
             Preso is two halfs: first half we talk about concepts for architecture as text and the second half is demos.
+          </aside>
+        </section>
+
+        <section>
+          <p>
+          <a href=https://twitter.com/brianleroux>@brianleroux</a>
+          </p>
+          <small>
+            Cofounder + CTO at <a href=https://twitter.com/begin>@begin</a>
+          </small>
+          <aside class=notes>
+            TKTK who are you? past companies? past projects?
           </aside>
         </section>
 
@@ -45,6 +54,30 @@
         <section><strong>Cloud functions</strong> are different: virtual machines and containers are a metaphor for a physical server</section>
 
         <section>
+          <p>AT BEGIN, WE BUILT X, Y, AND Z ON CLOUD FUNCTIONS
+          <aside class=notes>
+            - Why would we do such a silly thing?? In 2015, no less?
+            - What lessons were learned by Brian in the past that led us to this?
+          </aside>
+        </section>
+
+        <section>
+          <p>WE NEEDED / WANTED A, B, C
+          <aside class=notes>
+            - What were our needs? Wants?
+            - What did it buy us?
+          </aside>
+        </section>
+
+        <section>
+          <p>THERE'S ARE PROBLEMS
+          <aside class=notes>
+            - What problems has it wrought?
+            - Segue into solving problems with the same kind of thing...
+          </aside>
+        </section>
+
+        <section>
           <blockquote>
             We can't solve problems by using the same kind of thinking we used when we created them. - Albert Einstein
           </blockquote>
@@ -59,6 +92,11 @@
               <li>Which means getting consistent, repeatable and reproducable builds is tough to get right
             </ul>
           </aside>
+        </section>
+
+        <section>
+          <!-- This would be a very good moment to show some screenshots of how fiddly Lambda/APIGW can be, and possibly a diagram showing how many hundreds of Lambdas we use? Visuals are be powerful! -->
+          <p>[image here]
         </section>
 
         <section>
@@ -268,7 +306,7 @@ Table:
         </section>
 
         <section>
-					<code>.arc</code> is a plain text a manifest file
+					<code>.arc</code> is a plaintext manifest file
 					<aside class=notes>Designed to solve the specific problems above by treating infra as a build artifacts</aside>
 				</section>
 
@@ -324,13 +362,14 @@ get /</code></pre><small>(Other HTTP handlers supported: <code>@css</code>, <cod
         </section>
 
 				<section data-transition="fade-in fade-out"><code>npm run create</code><pre><code class=bash data-trim>#   /
-#   |-src
-#   | '-html
-#   |   '-get-index
-#   |     |-index.js
-#   |     '-package.json
-#   |-.arc
-#   '-package.json</code></pre><small>Lambda function wired to API Gateway to handles requests to <code>/</code>.</small>
+#   ├──src
+#   │  └──html
+#   │     └──get-index
+#   │        ├─index.js
+#   │        └─package.json
+#   │
+#   ├──.arc
+#   └──package.json</code></pre><small>A Lambda function wired to API Gateway handles requests to <code>/</code>.</small>
 				</section>
 
 				<section data-transition="fade-in fade-out"><code>.arc</code> is expressive<pre><code class=bash data-trim># this is an .arc file
@@ -348,16 +387,18 @@ get /api</code></pre>
 				</section>
 
 				<section><code>npm run create</code><pre><code class=bash data-trim>#   /
-#   |-src
-#   | |-html
-#   | | |-get-index/
-#   | | |-get-about/
-#   | | |-get-contact/
-#   | | '-post-contact/
-#   | '-html
-#   |   '-get-api/
-#   |-.arc
-#   '-package.json</code></pre><small>The file system layout mirrors the <code>.arc</code> file.</small>
+#   ├──src
+#   │  ├──html
+#   │  │  ├──get-index/
+#   │  │  ├──get-about/
+#   │  │  ├──get-contact/
+#   │  │  └──post-contact/
+#   │  │
+#   │  └──html
+#   │     └──get-api/
+#   │
+#   ├──.arc
+#   └──package.json</code></pre><small>The file system layout mirrors the <code>.arc</code> file.</small>
 				</section>
 
 				<section>a complete <code>.arc</code> example<pre><code class=bash data-trim>@app
@@ -478,6 +519,18 @@ exports.handler = arc.tables.update(like)
 					</ul>
 					</small>
 				</section>
+
+        <section>
+          <p>WE ARE USING THIS IN ANGER TO DO X, Y, Z
+        </section>
+
+        <section>
+          <p>BEFORE [omg the horror of our deploys, broken lambdas, errors, frustrated team members]
+        </section>
+
+        <section>
+          <p>AFTER [tested in seconds, deployed in seconds, time saved, humans happy, greener github graphs]
+        </section>
 
         <section><a href=https://arc.codes>arc.codes</a></section>
 <!--
