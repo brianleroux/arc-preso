@@ -74,7 +74,7 @@
         </section>
 
         <section>
-          <img width=500px src=/arc-preso/aws.png style=border:none;box-shadow:none;>
+          <img width=500px src=https://brianleroux.github.com/arc-preso/aws.png style=border:none;box-shadow:none;>
         </section>
 
         <section>
@@ -340,14 +340,13 @@ get /</code></pre><small>(Other HTTP handlers supported: <code>@css</code>, <cod
         </section>
 
 				<section data-transition="fade-in fade-out"><code>npm run create</code><pre><code class=bash data-trim>#   /
-#   ├──src
-#   │  └──html
-#   │     └──get-index
-#   │        ├─index.js
-#   │        └─package.json
-#   │
-#   ├──.arc
-#   └──package.json</code></pre><small>A Lambda function wired to API Gateway handles requests to <code>/</code>.</small>
+#   |-src
+#   | '-html
+#   |   '-get-index
+#   |     |-index.js
+#   |     '-package.json
+#   |-.arc
+#   '-package.json</code></pre><small>A Lambda function wired to API Gateway handles requests to <code>/</code>.</small>
 				</section>
 
 				<section data-transition="fade-in fade-out"><code>.arc</code> is expressive<pre><code class=bash data-trim># this is an .arc file
@@ -365,18 +364,16 @@ get /api</code></pre>
 				</section>
 
 				<section><code>npm run create</code><pre><code class=bash data-trim>#   /
-#   ├──src
-#   │  ├──html
-#   │  │  ├──get-index/
-#   │  │  ├──get-about/
-#   │  │  ├──get-contact/
-#   │  │  └──post-contact/
-#   │  │
-#   │  └──html
-#   │     └──get-api/
-#   │
-#   ├──.arc
-#   └──package.json</code></pre><small>The file system layout mirrors the <code>.arc</code> file.</small>
+#   |-src
+#   | |-html
+#   | | |-get-index/
+#   | | |-get-about/
+#   | | |-get-contact/
+#   | | '-post-contact/
+#   | '-json
+#   |   '-get-api/
+#   |-.arc
+#   '-package.json</code></pre><small>The file system layout mirrors the <code>.arc</code> file.</small>
 				</section>
 
 				<section>a complete <code>.arc</code> example<pre><code class=bash data-trim>@app
@@ -499,15 +496,25 @@ exports.handler = arc.tables.update(like)
 				</section>
 
         <section>
-          <p>WE ARE USING THIS IN ANGER TO DO X, Y, Z
+            Before <code>.arc</code><br>
+          <small>
+					<ol>
+            <li>Super long dev/depoy cycles
+						<li>Inconsistent infra leading to hard to trace bugs
+						<li>Frustration, demotivation, unhappiness and a sense of doom
+					</ol>
+					</small>
         </section>
 
         <section>
-          <p>BEFORE [omg the horror of our deploys, broken lambdas, errors, frustrated team members]
-        </section>
-
-        <section>
-          <p>AFTER [tested in seconds, deployed in seconds, time saved, humans happy, greener github graphs]
+            After <code>.arc</code><br>
+          <small>
+					<ol>
+            <li>Dev cycles are immediate, deployments run in secondss
+						<li>Infra is consistent, bugs are easy to trace (and isolated!)
+						<li>Green builds and happy devs
+					</ol>
+					</small>
         </section>
 
         <section><a href=https://arc.codes>arc.codes</a></section>
