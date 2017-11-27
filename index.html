@@ -331,7 +331,7 @@ get /</code></pre><small><code>@app</code> namespace scopes all generated infras
 helloapp
 
 @html
-get /</code></pre><small>(Other HTTP handlers supported: <code>@css</code>, <code>@js</code> and <code>@json</code>)</small>
+get /</code></pre><small>(Other HTTP handlers supported: <code>@json</code>)</small>
 				</section>
 
 
@@ -537,7 +537,10 @@ exports.handler = arc.tables.update(like)
 		</div>
 		<script>
     Reveal.initialize({
-    	showNotes: false
+    	showNotes: false,
+      slideNumber: true,
+      history: true,
+      progress: true,
     })
 
 		hljs.initHighlightingOnLoad()
