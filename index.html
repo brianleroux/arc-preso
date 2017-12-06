@@ -408,7 +408,7 @@ likes
 
         <section>Lets look at the generated cloud function code</section>
 
-				<section><code>src/html/get-index/index.js</code><pre><code class=javascript data-trim>var arc = require('@architect/prototype')
+				<section><code>src/html/get-index/index.js</code><pre><code class=javascript data-trim>var arc = require('@architect/functions')
 
 function index(req, res) {
   console.log(JSON.stringify(req, null, 2))
@@ -421,7 +421,7 @@ exports.handler = arc.html.get(index)
 </code></pre>
 				</section>
 
-        <section><code>src/html/post-likes/index.js</code><pre><code class=javascript data-trim>var arc = require('@architect/prototype')
+        <section><code>src/html/post-likes/index.js</code><pre><code class=javascript data-trim>var arc = require('@architect/functions')
 
 function likes(req, res) {
   // send an email or something here
@@ -434,7 +434,7 @@ exports.handler = arc.html.post(likes)
 </code></pre>
 				</section>
 
-        <section><code>src/events/hit-counter/index.js</code><pre><code class=javascript data-trim>var arc = require('@architect/prototype')
+        <section><code>src/events/hit-counter/index.js</code><pre><code class=javascript data-trim>var arc = require('@architect/functions')
 
 function count(payload, callback) {
   // do a db thing here probs
@@ -446,7 +446,7 @@ exports.handler = arc.events.subscribe(count)
 </code></pre>
 				</section>
 
-        <section><code>src/scheduled/daily-affirmation/index.js</code><pre><code class=javascript data-trim>var arc = require('@architect/prototype')
+        <section><code>src/scheduled/daily-affirmation/index.js</code><pre><code class=javascript data-trim>var arc = require('@architect/functions')
 
 function daily(payload, callback) {
   // idk, send an sms here maybe?
@@ -458,7 +458,7 @@ exports.handler = arc.scheduled(daily)
 </code></pre>
 				</section>
 
-        <section><code>src/tables/likes-update/index.js</code><pre><code class=javascript data-trim>var arc = require('@architect/prototype')
+        <section><code>src/tables/likes-update/index.js</code><pre><code class=javascript data-trim>var arc = require('@architect/functions')
 
 function like(record, callback) {
   // anything you want!
